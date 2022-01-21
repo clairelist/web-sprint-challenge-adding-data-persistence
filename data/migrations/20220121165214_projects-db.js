@@ -1,16 +1,28 @@
 
 exports.up = async function(knex) {
   await knex.schema.createTable('projects',table=>{
-      table.increments('project_id');
+        table.increments('project_id');
         table.string('project_name',128).notNullable();
         table.string('project_description',128);
-        table.integer('project_completed').defaultTo(0);
+        table.integer('project_completed').defaultTo(0); //this is not a real int, but sqlite doesn't have a bool datatype !
   })
   .createTable('resources',table=>{
-      table.increments('resource_id')
+      table.increments('resource_id');
+      table.string('resource_name',128).notNullable().unique();
+      table.string('resource_description',128);
   })
   .createTable('tasks',table=>{
-      table.increments('task_id')
+      table.increments('task_id');
+      table.string('task_description',256).notNullable();
+      table.string('task_notes',128);
+      table.integer('task_completed').defaultTo(0); //this is not a real int, but sqlite doesn't have a bool datatype !
+        table.integer('project_id')
+        .unsigned()
+        .references('project_id')
+        .inTable('projects')
+        .notNullable()
+        .onDelete('RESTRICT')
+        .onUpdate('RESTRICT');
   })
   .createTable('project_resources',table=>{
       table.increments('pr_id')
