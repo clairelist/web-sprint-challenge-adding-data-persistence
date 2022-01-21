@@ -55,7 +55,7 @@ Build the migration(s) in Knex inside the `data/migrations` folder using appropr
   - [X] `resource_name` - required and unique
   - [X] `resource_description` - optional
 
-- [ ] A **task** is one of the steps needed to complete a project and is stored in a `tasks` table with the following columns:
+- [X] A **task** is one of the steps needed to complete a project and is stored in a `tasks` table with the following columns:
 
   - [x] `task_id` - primary key
   - [X] `task_description` - required
@@ -79,7 +79,7 @@ Build an API inside the `api` folder with endpoints for:
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
-- [ ] `[GET] /api/projects`
+- [X] `[GET] /api/projects`
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
