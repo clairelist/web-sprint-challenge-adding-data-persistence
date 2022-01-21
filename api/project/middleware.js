@@ -24,6 +24,7 @@ const validateProject = (req, res, next) => {
   //     next();
   //   }
   // }
+  //none of that worked, so it is commented out til I can study more...
 
   module.exports = {
       validateProject,

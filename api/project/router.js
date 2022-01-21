@@ -20,15 +20,15 @@ router.get('/', (req, res) => {
   });
 
 //POST
-router.post('/', validateProject,(req, res, next) => {
-    const project = req.body
+router.post('/', validateProject,(req, res, next) => { //eslint does NOT like this function, despite testing working LOL
+    const project = req.body;
 
   Project.create(project)
     .then(project => {
       res.status(201).json(project)
     })
     .catch(next)
-  });
+  }); 
   
   router.use((err, req, res, next) => { // eslint-disable-line
     res.status(err.status || 500).json({
