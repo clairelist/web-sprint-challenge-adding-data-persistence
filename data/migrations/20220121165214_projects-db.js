@@ -15,7 +15,7 @@ exports.up = async function(knex) {
       table.increments('task_id');
       table.string('task_description',256).notNullable();
       table.string('task_notes',128);
-      table.integer('task_completed').defaultTo(0); //this is not a real int, but sqlite doesn't have a bool datatype !
+      table.boolean('task_completed').defaultTo(0); //this is not a real int, but sqlite doesn't have a bool datatype !
         table.integer('project_id')
         .unsigned()
         .references('project_id')
