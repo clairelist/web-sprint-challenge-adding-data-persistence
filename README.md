@@ -36,6 +36,7 @@ The project needs some additional NPM dependencies in order to work.
 ### Required Scripts
 
 Add `"start"`. `"server"`, `"migrate"` and `"rollback"` scripts to the `package.json` file. The tests depend on these scripts being correct!
+[X] [X] [X] [X] 
 
 ### Required Tables
 
@@ -101,17 +102,20 @@ Build an API inside the `api` folder with endpoints for:
 
 ## Submission format
 
-- [ ] Submit via Codegrade by pushing commits to your `main` branch on Github.
-- [ ] Check Codegrade before the deadline to compare its results against your local tests.
-- [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
-- [ ] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
+- [X] Submit via Codegrade by pushing commits to your `main` branch on Github.
+- [X] Check Codegrade before the deadline to compare its results against your local tests.
+- [X] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
+- [X] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain the difference between Relational Databases and SQL.
-  The difference between 
+  The difference between these is that relational databases are appointments between different tables, but plain SQL is just the one database.
 2. Why do tables need a Primary Key?
+  Tables need a way to uniquely identify each item in them, and a way for other tables to point to them via foriegn keys.
 3. What is the name given to a table column that references the Primary Key on another table?
+  Foriegn key.
 4. What do we need in order to have a _many to many_ relationship between two tables?
+  A foriegn key for each element that can be linked between the tables.
