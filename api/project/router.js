@@ -1,7 +1,7 @@
 // build your `/api/resources` router here
 //DATA section
 const Project = require('./model');
-const { validateProject, } = require('./middleware');
+const { validateProject,} = require('./middleware');
 //// note to future claire:: I really hope you don't have to encounter that bug again
 //// but if you are looking here it means you DID !
 //// since you exported the function in an object, you have to import it {here} like so, too.

@@ -1,11 +1,9 @@
 //checkFor name, desky, project_completed as a bool
-// function richtigr (val) {
-//   return Number(val);
-// }
+
 //have been wrestling trying to get this bool to behave it aint happening.
 
 const validateProject = (req, res, next) => {
-  console.log(req.body)
+  console.log(typeof req.body.project_completed)
     if(
       req.body.project_name === undefined
     ){
@@ -17,11 +15,15 @@ const validateProject = (req, res, next) => {
   
   }
 
+  // function richtigr (val) {
+  //   return Number(val);
+  // }
   // const checkCompleted = (req,res,next) => {
   //   console.log('check completed',req.body)
-  //   if(typeof (req.body.project_completed) !== 'number')
+  //   let thing = req.body.project_completed;
+  //   if(typeof (thing) !== 'number')
   //   {
-  //     richtigr(req.body.project_completed)
+  //     richtigr(thing)
   //     next();
   //   }
   // }
