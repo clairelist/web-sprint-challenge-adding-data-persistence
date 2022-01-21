@@ -10,9 +10,11 @@ function getById(id) {
   return lego('projects').where('project_id', id).first();
 }
 //needed for the below to return the thing
-async function create(project) {
-  const [id] = await lego('projects').insert(project);
-  return getById(id);
+function create(project) { 
+      return lego('projects').insert(project)
+        .then(([id]) => {
+          return lego('schemes').where('project_id',id).first(); //NOT an array ! first method fixes this
+        })
 }
 
 module.exports = {
