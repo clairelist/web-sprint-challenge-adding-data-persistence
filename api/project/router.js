@@ -1,7 +1,7 @@
 // build your `/api/resources` router here
 //DATA section
 const Project = require('./model');
-const {validateProject} = require('./middleware');
+const { validateProject } = require('./middleware');
 //// note to future claire:: I really hope you don't have to encounter that bug again
 //// but if you are looking here it means you DID !
 //// since you exported the function in an object, you have to import it {here} like so, too.
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
   });
 
 //POST
-router.post('/', validateProject ,(req, res, next) => {
+router.post('/', validateProject,(req, res, next) => {
     const project = req.body
 
   Project.create(project)
